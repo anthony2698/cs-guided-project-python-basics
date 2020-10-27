@@ -17,4 +17,21 @@ Examples:
 """
 def XO(txt):
     # Your code here
+    x = 0
+    o = 0
 
+    for i in range(0, len(txt)):
+        if txt[i] == 'x' or txt[i] == 'X':
+            x += 1
+        elif txt[i] == 'o' or txt[i] == 'O':
+            o += 1
+
+    print(f"x = {x} o = {o}")
+    if x == o:
+        return True
+    elif x > o or o > x:
+        return False
+
+print(XO("oOxXm"))
+    
+        
